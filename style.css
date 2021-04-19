@@ -1,0 +1,55 @@
+/*
+ * Globals
+ */
+@font-face {
+  font-family: 'CL'; /*a name to be used later*/
+  src: url('fontes/CL Bold.ttf') format('truetype'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'CLB'; /*a name to be used later*/
+  src: url('fontes/CL Bold.ttf') format('truetype'); /*URL to font*/
+}
+
+:root {
+  --color1: #243724;
+  --color2: #637F63;
+  --color3:  #809D85; 
+  --color4:  #B9D2B4;
+  --color5: #F5F6F5;
+  --color6: #E9EAFT;
+  --color7: #D9D9D9;
+}
+
+
+html,
+body {
+  height: 100%;
+  /*background-color: #333;*/
+}
+
+.navbar{
+  background-color: var(--color2);
+  font-family: 'CL';
+}
+
+.congressita-area-button{
+  background-color: var(--color1);
+}
+
+.inscricao-button {
+  background-color: var(--color1);
+  font-family: 'CLB';
+}
+
+.fonte-coma-cl {
+  font-family: 'CL';
+}
+
+.fonte-coma-clb {
+  font-family: 'CLB';
+}
+
+.paragrafo {
+  font-size: large;
+}
