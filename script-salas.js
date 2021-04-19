@@ -10,11 +10,11 @@ var area_congressita_btn_element = document.getElementById("area_congressita_btn
 
 home_btn_element.href = "index.html";
 org_btn_element.href = "organizadores.html";
-programacao_btn_element.href = "/programacao.html";
-pj_cult_btn_element.href = "/p-cultural.html";
-patrocinadores_btn_element.href = "/patrocinadores.html";
-parcerias_btn_element.href = "/parcerias.html";
-instituicoes_btn_element.href = "/instituicoes.html";
-area_congressita_btn_element.href = "/login.html";
+programacao_btn_element.href = "programacao.html";
+pj_cult_btn_element.href = "p-cultural.html";
+patrocinadores_btn_element.href = "patrocinadores.html";
+parcerias_btn_element.href = "parcerias.html";
+instituicoes_btn_element.href = "instituicoes.html";
+area_congressita_btn_element.href = "login.html";
 
 console.log("Sucesso ao abrir script das salas")
