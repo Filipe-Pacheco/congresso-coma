@@ -37,35 +37,21 @@
             </div>
         </nav>
 
-        <style>
-            .navbar {
-                transition: 500ms ease;
-            }
-            .navbar.scrolled {
-                background: transparent;
-            }
-        </style>
-
         <div class="container-fluid pt-5">
             <!-- Hero-->
-            <div height="500px" class="row justify-content-center py-5">
-                <div class="col-md-2">
-                    <div class="row">
-                        <img src="https://images.even3.com.br/Can-emlDfkcQFCsbad1XRjhEoZE=/fit-in/250x250/smart/even3.blob.core.windows.net/logos/COMAXVILOGO.046a5ff520a04083827e.png" alt="" srcset="" />
-                    </div>
-                    <div class="row justify-content-center">
-                        <p>
-                            <a href="http://www.even3.com.br/comaxvi" class="btn btn-lg btn-dark inscricao-button">Inscrever-se</a>
-                        </p>
-                    </div>
-                </div>
+            <div class="container-fluid my-5 my-md-3">
+              <div class="row justify-content-center pt-5">
+                <img src="https://images.even3.com.br/Can-emlDfkcQFCsbad1XRjhEoZE=/fit-in/250x250/smart/even3.blob.core.windows.net/logos/COMAXVILOGO.046a5ff520a04083827e.png" alt="" srcset="" />
+              </div>
+              <div class="row justify-content-center pb-5">
+                <a href="http://www.even3.com.br/comaxvi" class="btn btn-lg btn-dark inscricao-button">Inscrever-se</a>
+              </div>
             </div>
-
             <!-- Conteúdo fora do Hero -->
 
             <!-- O que é o congresso -->
             <div class="row justify-content-center py-4" style="background-color: #f5f7f8;">
-                <div class="col-8">
+                <div class="col-10 col-md-8">
                     <h2 class="fonte-coma-clb">O que é o congresso? Sobre o COMA</h2>
                     <p class="fonte-coma-cl paragrafo">
                         O Congresso Médico Acadêmico da Universidade Nove de Julho campus Vergueiro (COMA), é um congresso acadêmico feito por alunos e para alunos, em conjunto com o Centro Acadêmico César Timo Iaria (CACTI) e as Turmas de
@@ -371,10 +357,10 @@
 
             <!-- Kit Congressista -->
             <div class="row justify-content-center py-5" style="background-color: #f5f7f8;">
-                <div class="col-8">
+                <div class="col-11 col-md-8">
                     <div class="row">
                         <div class="col">
-                            <h1 class="fonte-coma-clb">Inscreva-se no XVI COMA! Na aquisição de um ingresso você adquire:</h1>
+                            <h3 class="fonte-coma-clb">Inscreva-se no XVI COMA! Na aquisição de um ingresso você adquire:</h3>
                             <p class="fonte-coma-cl paragrafo">
                                 Acesso a todas as palestras do XVI COMA Certificado de 15h (se completar 70% de presença) 01 Kit Congressista 01 Inscrição para algum dos Workshops (vagas limitadas) Possibilidade de apresentar um trabalho
                                 científico (se aprovado pela comissão científica) Certificado de apresentação de trabalho científico (se aprovado pela comissão científica). Acesso completo a “Área do congressista” Possibilidade de
@@ -386,12 +372,12 @@
             </div>
 
             <!-- Outras Edições -->
-            <div class="row justify-content-center pt-5" style="background-color: #fff;">
+            <div class="row justify-content-center py-3 py-md-5" style="background-color: #fff;">
                 <h3>Outras Edições</h3>
             </div>
-            <div class="row justify-content-center py-5" style="background-color: #fff;">
-                <div class="col-4" >
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6j2g_7rDmc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="row justify-content-center py-3 py-md-5" style="background-color: #fff;">
+                <div class="col-12 col-md-6" min-height="500">
+                    <iframe src="https://www.youtube.com/embed/6j2g_7rDmc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -401,10 +387,10 @@
           <h3 class="p-3" style="text-align:center">Turmas organizadoras</h3>
           <div class="row justify-content-center" style="background-color: #fff;">
             <div class="col-3">
-                <img src="src/organizadores/logo-turma1.jpg" class="card-img-top" alt="...">
+                <img src="src/organizadores/logo-turma1.jpg" class="card-img-top">
             </div>
             <div class="col-3">
-                <img src="src/organizadores/logo-turma2.jpg" class="card-img-top" alt="...">
+                <img src="src/organizadores/logo-turma2.jpg" class="card-img-top">
             </div>
           </div>
         </div>
@@ -416,8 +402,23 @@
         </footer>
 
         <style>
-            /* {border: red 1px solid;}*/
+          .navbar {
+              transition: 500ms ease;
+          }
+          .navbar.scrolled {
+              background: transparent;
+          }
+          video,
+          iframe {
+            width: 100% !important;
+            height: 300px !important;
+          }
+          p {
+            text-align: justify;
+            text-justify: inter-word;
+          }
         </style>
+
 
         <!-- Optional JavaScript -->
         <!-- Script das Salas -->
