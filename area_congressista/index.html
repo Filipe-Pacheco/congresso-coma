@@ -11,6 +11,9 @@
         <!-- Icons Bootstrap -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="/style.css" />
+        <script>
+          var user_session = JSON.parse(sessionStorage.getItem('user'));
+        </script>
         
     </head>
     <body>
@@ -43,43 +46,46 @@
 
         <!-- Conteúdo -->
         <div class="container-fluid">
-            <div class="row justify-content-center my-5">
-                <h1> Bem vindo ao COMA</h1>
+          <div class="row justify-content-center my-5">
+            <div class="col-4">
+              <h1> Bem vindo ao COMA</h1>
+              <h6 id="info_user"></h6>
             </div>
-            <div class="row mt-4 justify-content-center row-cols-1 row-cols-md-4 g-4">
-                <div class="col-2" onclick="mudar_pagina('sala_1.html')">
-                  <div class="card h-100">
-                    <i class="bi bi-caret-right-square"></i>
-                    <div class="card-body">
-                      <h5 class="card-title">Sala de Transmissão</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2" onclick="mudar_pagina('trabalhos-cientificos.html')">
-                  <div class="card h-100">
-                    <i class="bi bi-file-earmark-slides"></i>
-                    <div class="card-body">
-                      <h5 class="card-title">Trabalhos Científicos</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2" onclick="mudar_pagina('workshop.html')">
-                  <div class="card h-100">
-                    <i class="bi bi-easel"></i>
-                    <div class="card-body">
-                      <h5 class="card-title">Workshop</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2" onclick="mudar_pagina('kit-congressista.html')">
-                  <div class="card h-100">
-                    <i class="bi bi-gift"></i>
-                    <div class="card-body">
-                      <h5 class="card-title">Kit Congressista</h5>
-                    </div>
+          </div>
+          <div class="row mt-4 justify-content-center row-cols-1 row-cols-md-4 g-4">
+              <div class="col-8 col-sm-4 col-md-2" onclick="mudar_pagina('sala_1.html')">
+                <div class="card h-100">
+                  <i class="bi bi-caret-right-square"></i>
+                  <div class="card-body">
+                    <h5 class="card-title">Sala de Transmissão</h5>
                   </div>
                 </div>
               </div>
+              <div class="col-8 col-sm-4 col-md-2" onclick="mudar_pagina('trabalhos-cientificos.html')">
+                <div class="card h-100">
+                  <i class="bi bi-file-earmark-slides"></i>
+                  <div class="card-body">
+                    <h5 class="card-title">Trabalhos Científicos</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-8 col-sm-4 col-md-2" onclick="mudar_pagina('workshop.html')">
+                <div class="card h-100">
+                  <i class="bi bi-easel"></i>
+                  <div class="card-body">
+                    <h5 class="card-title">Workshop</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-8 col-sm-4 col-md-2" onclick="mudar_pagina('kit-congressista.html')">
+                <div class="card h-100">
+                  <i class="bi bi-gift"></i>
+                  <div class="card-body">
+                    <h5 class="card-title">Kit Congressista</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
 
 
@@ -88,7 +94,7 @@
                 text-align: center;
             }
 
-            i{
+            i {
                 font-size: 100px; 
                 font-weight: 100; 
                 align-self: center;
@@ -97,23 +103,24 @@
             .card:hover {
                 transform: scale(1.05);
                 transition: all 300ms;
-                box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); 
+                box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
             }
         </style>
-
         <!-- END Conteúdo -->
         
 
 
         <!-- Optional JavaScript -->
         <script>
-          function mudar_pagina(pagina) {
-            window.location.href = pagina;
-
-          }
+          var info_user_text = "Olá, " + user_session.inscrito + " você está inscrito no workshop: " + user_session.workshop_name;
+          // Condição de workshop
+          //
+          if (user_session.work)
+          document.getElementById("info_user").appendChild(document.createTextNode("Olá, " + user_session.inscrito + " você está inscrito no workshop: " + user_session.workshop_name));
         </script>
         <!-- Script das Salas -->
-        <script src="script-salas.js"></script>
+        <script src="/script-salas.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
