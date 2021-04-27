@@ -33,6 +33,11 @@ body {
   font-family: 'CL';
 }
 
+.scrolled {
+  background-color: var(--color2);
+  font-family: 'CL';
+}
+
 .congressita-area-button{
   background-color: var(--color1);
 }
@@ -52,4 +57,8 @@ body {
 
 .paragrafo {
   font-size: large;
+}
+
+.teste {
+  border: 1px solid red;
 }

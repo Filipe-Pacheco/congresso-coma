@@ -52,14 +52,16 @@
                     <button>create</button>
                     <p class="message">Already registered? <a href="#">Sign In</a></p>
                   </form>
-                  <form class="login-form">
-                    <input type="text" placeholder="Nome"/>
-                    <input type="password" placeholder="CPF"/>
-                    <button>Entrar</button>
-                  </form>
+                  <form class="login-form" name="login-form">
+                    <input type="text" name="ao_cpf" id="ao_cpf" placeholder="CPF" maxlength="14"/>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                    <a type="submit" onClick="validarInscricao()" class="btn btn-primary">Entrar</a>
+                </form>
                 </div>
               </div>
-              
+
         
         
         <style>
@@ -88,7 +90,7 @@
             box-sizing: border-box;
             font-size: 14px;
             }
-            .form button {
+            .form a {
             font-family: "Roboto", sans-serif;
             text-transform: uppercase;
             outline: 0;
@@ -159,5 +161,76 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Jquery Mask -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous"></script>
+        <script>
+            // Jqyer Mask
+            $(function($){
+                    $("#ao_cpf").mask('000.000.000-00');
+            });
+
+            // Lista de inscritos
+            var inscritos = ["45654", "4565456", "123", "059.140.821-02", "46228596888", "028.686.150-07", "088.187.099-41"];
+            var workshop_inscritos = [
+                            {id: 0, nome: "Intubação orotraqueal", inscritos: ["088.187.099-41", "480.059.798-60", "316.245.308-93", "076.216.964-86", "345.299.408-29", "498.819.598-88", "440.115.388-09", "493.227.078-01", "469.727.388-57", "491.160.578-21", "702.973.961-29", "097.591.636-08", "484.927.748-94", "512.261.288-90", "462.537.448-01", "127.067.326-28", "404.924.508-62", "330.600.308-55", "393.608.978-76", "158.478.647-79"]},
+                            {id: 1, nome: "USG na emergência", inscritos: ["013.783.536-17", "039.304.212-08", "014.181.710-00", "409.540.848-02", "321.357.818-51", "031.489.591-40", "468.296.538-78", "433.529.538-30", "442.497.748-05", "448.755.958-83", "438.635.538-37", "415.486.428-94", "485.539.938-84", "385.761.308-40", "476.108.668-81", "705.395.761-66", "041.177.135-31", "339.557.578-03", "390.899.878-60"]},
+                            {id: 2, nome: "ECG em 60 minutos", inscritos: ["491.742.718-57", "216.588.128-59", "046.095.729-58", "483.177.578-97", "509.418.628-01", "378.162.658-08", "349.941.018-41", "042.201.391-92", "317.423.578-22", "333.842.298-94", "351.199.328-86", "106.344.336-95", "410.218.298-54", "379.245.468-80", "444.262.488-76", "469.952.068-51", "460.599.438-61", "237.941.938-81", "509.980.198-60", "104.082.706-32", "480.995.538-96", "476.587.058-88"]},
+                            {id: 3, nome: "OSCE", inscritos: ["020.587.861-06", "360.138.218-01", "431.922.728-05", "093.316.456-43", "438.534.508-22", "412.611.018-63", "143.965.637-10", "018.680.771-60", "068.415.439-04", "439.126.848-55", "028.686.150-07", "062.735.855-12", "485.172.208-70", "014.720.351-19", "134.672.747-30", "473.933.718-55", "510.577.778-62", "057.688.221-60", "409.438.478-26"]},
+                            {id: 4, nome: "IFMSA", inscritos: ["059.140.821-02", "331.957.048-03", "469.948.778-50", "437.980.538-71", "037.961.211-95", "340.748.458-57", "473.017.988-90", "054.677.431-80", "158.323.267-25", "102.960.326-03", "024.556.871-98", "415.973.858-32", "230.566.788-46", "482.368.368-43", "141.463.167-74", "418.817.578-89", "389.390.568-50", "513.235.538-27", "054.196.941-23", "356.136.798-43"]},             
+                            {id: 5, nome: "Emergências pediátricas", inscritos: ["456.442.838-10", "477.438.008-30", "415.810.528-55", "706.395.251-05", "438.174.798-40", "487.818.578-37", "061.559.349-67", "139.279.617-28", "410.702.878-06", "504.195.808-40", "472.703.128-00", "482.439.468-61", "486.885.048-22", "423.941.098-31", "365.658.118-57", "465.347.188-63", "385.849.358-94", "423.793.658-90", "185.498.367-96"]}
+                        ];
+
+            // Busca na lista dos inscritos
+            function estaInscrito(cpf) {
+                //cpf = cpf.replace(/[^0-9]/g, "")
+                if (inscritos.includes(cpf)){
+                return true
+                } 
+            }
+
+            // Retorna em bool se cpf está inscrito em algum workshop
+            function estaEmWorkshop(cpf){
+            for (i in workshop_inscritos) {
+                if (workshop_inscritos[i].inscritos.includes(cpf)) {
+                //console.log("Está inscrito no workshop " + workshop_inscritos[i].nome)
+                return true
+                break;
+                }
+            }
+            }
+
+            // Retorna qual workshop está inscrito
+            function qualWorkshop(cpf){
+            for (i in workshop_inscritos) {
+                if (workshop_inscritos[i].inscritos.includes(cpf)) {
+                //console.log("Está inscrito no workshop " + workshop_inscritos[i].nome)
+                return workshop_inscritos[i].nome
+                break;
+                }
+            }
+            }
+
+            // Função de validade input
+            function validarInscricao(){
+            cpf = document.getElementById("ao_cpf").value
+            // Criando objeto de resposta
+            var resposta = {
+                inscrito: false, // Bool
+                workshop: false, // Bool
+                workshop_nome: ''// Text
+            }
+            // Comparando e retornando
+            if (estaInscrito(cpf)){
+                estaEmWorkshop(cpf) ? resposta = {inscrito: true, workshop: true, workshop_nome: qualWorkshop(cpf)} : resposta = {inscrito: true, workshop: false, workshop_nome: ""};
+                console.log(resposta);
+                return resposta
+            } else {
+                console.log(resposta);
+                return resposta
+            }
+            }            
+
+        </script>
     </body>
 </html>

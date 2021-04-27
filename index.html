@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container-fluid">
                 <img width="40px" src="src/coma-img.png" alt="" />
                 <a class="navbar-brand ml-2" href="#">XVI COMA</a>
@@ -37,12 +37,24 @@
             </div>
         </nav>
 
-        <div class="container">
+        <style>
+            body {
+                min-height: 200vh;
+            }
+            .navbar {
+                transition: 500ms ease;
+            }
+            .navbar.scrolled {
+                background: transparent;
+            }
+        </style>
+
+        <div class="container-fluid pt-5">
             <!-- Hero-->
-            <div class="row justify-content-center my-5">
-                <div class="col-auto">
+            <div height="500px" class="row justify-content-center py-5">
+                <div class="col-2">
                     <div class="row">
-                        <img width="400px" src="https://images.even3.com.br/Can-emlDfkcQFCsbad1XRjhEoZE=/fit-in/250x250/smart/even3.blob.core.windows.net/logos/COMAXVILOGO.046a5ff520a04083827e.png" alt="" srcset="" />
+                        <img width="300px" src="https://images.even3.com.br/Can-emlDfkcQFCsbad1XRjhEoZE=/fit-in/250x250/smart/even3.blob.core.windows.net/logos/COMAXVILOGO.046a5ff520a04083827e.png" alt="" srcset="" />
                     </div>
                     <div class="row justify-content-center">
                         <p>
@@ -52,36 +64,362 @@
                 </div>
             </div>
 
-            <!-- Conteúdo fora do Hero-->
-            <div class="row mt-4">
-                <h1 class="fonte-coma-clb">O que é o congresso? Sobre o COMA</h1>
-                <p class="fonte-coma-cl paragrafo">
-                    O Congresso Médico Acadêmico da Universidade Nove de Julho campus Vergueiro (COMA), é um congresso acadêmico feito por alunos e para alunos, em conjunto com o Centro Acadêmico César Timo Iaria (CACTI) e as Turmas de 3o e
-                    4o ano de medicina (neste ano, XXVI e XXVII). Esse ano completamos 16 anos de história, sempre com o objetivo de fomentar a pesquisa e o ensino, estimulando a produção científica e trazendo mais conhecimento para os
-                    alunos e mais reconhecimento para a universidade. Buscamos temas atuais que englobam todas as diversidades sociais e que acrescente na formação médica dos acadêmicos.
-                </p>
-                <p class="fonte-coma-cl ">
-                    Estamos preparando o COMA XVI com muito carinho para vocês. Aguardamos sua presença!
-                </p>
+            <!-- Conteúdo fora do Hero -->
+
+            <!-- O que é o congresso -->
+            <div class="row justify-content-center py-4" style="background-color: #f5f7f8;">
+                <div class="col-8">
+                    <h2 class="fonte-coma-clb">O que é o congresso? Sobre o COMA</h2>
+                    <p class="fonte-coma-cl paragrafo">
+                        O Congresso Médico Acadêmico da Universidade Nove de Julho campus Vergueiro (COMA), é um congresso acadêmico feito por alunos e para alunos, em conjunto com o Centro Acadêmico César Timo Iaria (CACTI) e as Turmas de
+                        3o e 4o ano de medicina (neste ano, XXVI e XXVII). Esse ano completamos 16 anos de história, sempre com o objetivo de fomentar a pesquisa e o ensino, estimulando a produção científica e trazendo mais conhecimento
+                        para os alunos e mais reconhecimento para a universidade. Buscamos temas atuais que englobam todas as diversidades sociais e que acrescente na formação médica dos acadêmicos.
+                    </p>
+                    <p class="fonte-coma-cl">
+                        Estamos preparando o COMA XVI com muito carinho para vocês. Aguardamos sua presença!
+                    </p>
+                </div>
             </div>
 
-            <div class="row mt-4">
-                <h1 class="fonte-coma-clb">Inscreva-se no XVI COMA! Na aquisição de um ingresso você adquire:</h1>
-                <p class="fonte-coma-cl paragrafo">
-                    Acesso a todas as palestras do XVI COMA Certificado de 15h (se completar 70% de presença) 01 Kit Congressista 01 Inscrição para algum dos Workshops (vagas limitadas) Possibilidade de apresentar um trabalho científico (se
-                    aprovado pela comissão científica) Certificado de apresentação de trabalho científico (se aprovado pela comissão científica). Acesso completo a “Área do congressista” Possibilidade de participar dos sorteios
-                    Possibilidade de ganhar prêmios nas gincanas do evento
-                </p>
+            <!-- Cronograma -->
+            <div class="row justify-content-center py-5">
+                <div class="col-8">
+                    
+                    <div class="container">
+                        <h3 class="fonte-coma-clb py-3">01/05 - Bloco "A Clínica na Prática"</h3>
+                        <div class="row">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Horário</th>
+                                    <th scope="col">Palestra</th>
+                                    <th scope="col">Palestrante</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">08:20</th>
+                                    <td><bold>Introdução à Medicina de Áreas Remotas</bold></td>
+                                    <td>Dra Daniela Silvestre</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">09:05</th>
+                                    <td>Tratamento do paciente grave com COVID-19 na UTI</td>
+                                    <td>Dr.Luciano de Azevedo</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">09:50</th>
+                                    <td colspan="2">Intervalo</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <h3  class="fonte-coma-clb py-3">01/05 - BMJ</h3 >
+                        <div class="row">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Horário</th>
+                                <th scope="col">Palestra</th>
+                                <th scope="col">Palestrante</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">11:40</th>
+                                <td>BMJ</td>
+                                <td>Laura Santana</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <h3  class="fonte-coma-clb py-3">01/05 - Bloco "O Avanço da Cirurgia pela Modernidade"</h3 >
+                        <div class="row">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Horário</th>
+                                <th scope="col">Palestra</th>
+                                <th scope="col">Palestrante</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">08h</th>
+                                <td colspan="2">Abertura</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">08:20</th>
+                                <td>Transplante de útero</td>
+                                <td>Dr. Dani Ejzenberg</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">09:05</th>
+                                <td>Reconstrução de Matriz Dérmica</td>
+                                <td>Dr. Breno Albuquerque Knop</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">09:50</th>
+                                <td colspan="2">Intervalo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">10:10</th>
+                                <td>Sem fronteiras para o exercício da Anestesiologia: o relato de Otávio Omati em missões
+                                  do Médico Sem Fronteiras
+                                  </td>
+                                <td>Dr. Otávio Omati</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">10:55</th>
+                                <td>Redesignação sexual - aspectos gerais da cirurgia</td>
+                                <td>Dr. José C. Martins Junior</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+            
+                        <h3  class="fonte-coma-clb py-3">01/05 - Bloco "Medicina Além da Cura"</h3 >
+                        <div class="row">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Horário</th>
+                                <th scope="col">Palestra</th>
+                                <th scope="col">Palestrante</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">13:20</th>
+                                <td>Medicina integrativa e espiritualidade</td>
+                                <td>Dra. Denise Tiemi</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">14:05 </th>
+                                <td>O Médico das Despedidas</td>
+                                <td>Dr. Fernando Kawai</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">14:50</th>
+                                <td>Medicina Canabinóide no Brasil: atualizações</td>
+                                <td>Dr. Vinícius Barbosa</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">15:35</th>
+                                <td colspan="2">Intervalo</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+            
+                        <h3  class="fonte-coma-clb py-3">01/05 - Bloco "A trajetória do pré internato: autocuidado, inovação e ciência"</h3>
+                        <div class="row">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Horário</th>
+                                <th scope="col">Palestra</th>
+                                <th scope="col">Palestrante</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">15:55</th>
+                                <td>Expedições humanitárias e o sacerdócio médico</td>
+                                <td>Dr. Luiz Vilanova</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">16:45</th>
+                                <td>Saúde mental do estudante de medicina</td>
+                                <td>Dr. Sérgio Baldassin</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">17:30</th>
+                                <td>Construção de uma carreira acadêmica: como fazer a diferença</td>
+                                <td>Dr. Cauê Gasparotto</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">18:00</th>
+                                <td colspan="2">Encerramento</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+            
+            
+                        <h3 class="fonte-coma-clb py-3">01/05 - Bloco "Vou me formar, e agora?"</h3>
+                        <div class="row">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Horário</th>
+                                <th scope="col">Palestra</th>
+                                <th scope="col">Palestrante</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">15:55</th>
+                                <td>O mercado de trabalho para o recém formado</td>
+                                <td>Dr. Alexandre Crippa Sant'Anna</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">16:45</th>
+                                <td>Residência nos EUA</td>
+                                <td>Dra. Nathalia Moraes Figueiredo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">17:30</th>
+                                <td>Finanças Médicas</td>
+                                <td>Dr. Willian Batista</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">18:00</th>
+                                <td>Encerramento</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+            
+                        <hr>
+            
+                        <h3 class="fonte-coma-clb py-3">02/05 - Bloco "Os Limites entre Estética e Saúde"</h3>
+                        <div class="row">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Horário</th>
+                                <th scope="col">Palestra</th>
+                                <th scope="col">Palestrante</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">08:10 </th>
+                                <td>transtornos alimentares</td>
+                                <td>Dr. Mireille Almeida</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">00:00</th>
+                                <td>FALTA NOME DA PALESTRA</td>
+                                <td>Dr. Edgar da Silva Neto</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">09:40</th>
+                                <td>Uso abusivo de hormônios e modulação hormonal</td>
+                                <td>Dra. Lorena Amato</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+            
+                        <h3 class="fonte-coma-clb py-3">02/05 - Bloco "Highlights da Pandemia"</h3>
+                        <div class="row">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Horário</th>
+                                <th scope="col">Palestra</th>
+                                <th scope="col">Palestrante</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">10:45</th>
+                                <td>Mesa Redonda - Vacinas contra COVID-19: dos princípios à imunização em massa</td>
+                                <td>ção em massa Dr. Nilton José Fernandes Cavalcante e Dra. Regiane dos Santos Feliciano</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">11:30</th>
+                                <td>Covid 19 e Gestação: o que se sabe até agora?</td>
+                                <td>Dr. Nicolau D'Amico Filho</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+            
+                        <h3 class="fonte-coma-clb py-3">02/05 - Encerramento</h3>
+                        <div class="row">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Horário</th>
+                                <th scope="col">Palestra</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">00:00</th>
+                                <td>Kahoot do COMA</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">00:00</th>
+                                <td>Professora Homenageada</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">00:00</th>
+                                <td>Vídeo de Encerramento</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">00:00</th>
+                                <td>Discursos de Encerramento</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </div><!--FIM da tabela-->
+
+                </div>
             </div>
+
+            <!-- Kit Congressista -->
+            <div class="row justify-content-center py-5" style="background-color: #f5f7f8;">
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="fonte-coma-clb">Inscreva-se no XVI COMA! Na aquisição de um ingresso você adquire:</h1>
+                            <p class="fonte-coma-cl paragrafo">
+                                Acesso a todas as palestras do XVI COMA Certificado de 15h (se completar 70% de presença) 01 Kit Congressista 01 Inscrição para algum dos Workshops (vagas limitadas) Possibilidade de apresentar um trabalho
+                                científico (se aprovado pela comissão científica) Certificado de apresentação de trabalho científico (se aprovado pela comissão científica). Acesso completo a “Área do congressista” Possibilidade de
+                                participar dos sorteios Possibilidade de ganhar prêmios nas gincanas do evento
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outras Edições -->
+            <div class="row justify-content-center pt-5" style="background-color: #fff;">
+                <h3>Outras Edições</h3>
+            </div>
+            <div class="row justify-content-center py-5" style="background-color: #fff;">
+                <div class="col-4" >
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6j2g_7rDmc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Turmas Organizadoras -->
+            <h3 class="p-3" style="text-align:center">Turmas organizadoras</h3>
+            <div class="row justify-content-center" style="background-color: #fff;">
+              <div class="col-3">
+                  <img src="/src/organizadores/logo-turma1.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="col-3">
+                  <img src="/src/organizadores/logo-turma2.jpg" class="card-img-top" alt="...">
+              </div>
+            </div>
+            
+
+
         </div>
+        <!-- Rodapé -->
+        <footer class="py-3" style="background-color: #637F63; text-align: center;">
+            <p style="color: #fff">© Congresso Médico Acadêmico - 2021 | All Rights Reserved</p>
+        </footer>
 
         <style>
             /* {border: red 1px solid;}*/
         </style>
-        <br>
-        <br>
-        <br>
-        <br>
 
         <!-- Optional JavaScript -->
         <!-- Script das Salas -->
@@ -90,5 +428,10 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script>
+            $(window).scroll(function () {
+                $("nav").toggleClass("scrolled", $(this).scrollTop() > 50);
+            });
+        </script>
     </body>
 </html>
