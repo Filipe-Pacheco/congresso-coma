@@ -42,24 +42,31 @@
             <h1 class="p-5" style="text-align:center">Instituições</h1>
             <div class="row justify-content-center">
                 <div class="col-10 col-md-2">
-                  <div class="card">
+                  <div class="card" id="btn-ca" onClick="window.location = 'ca-pag.html'">
                     <img src="src/instituicoes/ca-logo.png" class="card-img-top">
                   </div>
                 </div>
                 <div class="col-10 col-md-2">
-                  <div class="card">
+                  <div class="card" id="ifmsa-ca" onClick="window.location = 'ifmsa.html'">
                     <img src="src/instituicoes/ifmsa-logo.png" class="card-img-top">
                   </div>
                 </div>
                 <div class="col-10 col-md-2">
-                    <div class="card">
+                    <div class="card" id="atletica-ca" onClick="window.location = 'atletica.html'">
                       <img src="src/instituicoes/atletica-logo.jpeg" class="card-img-top">
                     </div>
                 </div>
             </div>
-
-
         </div>
+
+        <style>
+            .card:hover {
+                transform: scale(1.05);
+                transition: all 300ms;
+                box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+            }
+        </style>
 
         <!-- Optional JavaScript -->
         <!-- Script das Salas -->
