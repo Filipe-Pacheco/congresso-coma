@@ -9,6 +9,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -36,7 +37,7 @@
                 </div>
             </div>
         </nav>
-
+        
         <!-- Conteúdo -->
         <div class="container">
           <h1 class="p-5" style="text-align:center">Organizadores</h1>
@@ -54,16 +55,52 @@
               </div>
             </div>
           </div>
-          <h1 class="p-5" style="text-align:center">Lista dos organizadores</h1>
-            <div class="row">
-                <embed src="" width="100%" height="2100px"/>
+          
+        </div>
+        <h1 class="p-5" style="text-align:center">Lista dos organizadores</h1>
+        <div class="container-fluid" id="app">
+          
+          <div class="row row-cols-1 row-cols-md-6">
+
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="https://picsum.photos/200/300?random=1" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      <strong>Nome:</strong> {{data.nome}} <br>
+                      <strong>Aniversário: </strong>14/09<br>
+                      <strong>Email: </strong>jessica.mosello@hotmail.com<br>
+                      <strong>Turma: </strong>XXVI<br>
+                      <strong>Cargo: </strong> Presidente<br>
+                      <strong>Facebook:</strong>Jessica Mosello<br>
+                      <strong>Instagram: </strong> @jemosello<br>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+     </div>
+
         </div>
 
+        <script>
+          var app = new Vue({
+            el: '#app',
+            data: [
+              { nome: 'Jessica Mosello', aniversário: 'asd', Cargo: 'asd' },
+              { nome: '2', aniversário: '2', Cargo: '2' },
+            ]
+          })
+        </script>
 
         <!-- Optional JavaScript -->
         <!-- Script das Salas -->
         <script src="script-salas.js"></script>
+        
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

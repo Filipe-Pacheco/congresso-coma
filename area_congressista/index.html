@@ -13,6 +13,13 @@
         <link rel="stylesheet" href="/style.css" />
         <script>
           var user_session = JSON.parse(sessionStorage.getItem('user'));
+          if (user_session) {
+            console.log("Sucesso no login")
+          } else {
+            window.stop();
+            alert("Você precisa fazer login Primeiro")
+            window.location = "/login.html"
+          }
         </script>
         
     </head>
