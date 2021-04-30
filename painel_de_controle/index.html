@@ -13,7 +13,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <img width="40px" src="src/coma-img.png" alt="" />
+                <img width="40px" src="/src/coma-img.png" alt="" />
                 <a class="navbar-brand ml-2" href="#">XVI COMA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,70 +37,126 @@
             </div>
         </nav>
 
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-database.js"></script>
-        <script>
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            var firebaseConfig = {
-            apiKey: "AIzaSyD2mAXXF1R-MN8eV7zp_VJ8jFLCzwNVNyA",
-            authDomain: "teste-api-classroom-f474e.firebaseapp.com",
-            databaseURL: "https://teste-api-classroom-f474e-default-rtdb.firebaseio.com",
-            projectId: "teste-api-classroom-f474e",
-            storageBucket: "teste-api-classroom-f474e.appspot.com",
-            messagingSenderId: "815422228927",
-            appId: "1:815422228927:web:150746092c6e0b2119390a",
-            measurementId: "G-0Z5NTE3S7B"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-        </script>
-
         <!-- Conteúdo -->
         <div class="container">
             <div class="row mt-5">
                 <div class="col">
                     <h1>Painel de Controle do COMA</h1>
                     
+                    <h4>Salas de Transmissão</h4>
                     <form class="mt-3">
-                        <label for="sala1" class="form-label">Email address</label>
+                        <!-- Sala 1 -->
+                        <label for="sala1" class="form-label">Sala1</label>
                         <div class="input-group mb-3">
-                            
-                            <input id="sala1" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <input id="sala1" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Atualizar</button>
                         </div>
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+
+                        <!-- Sala 2 -->
+                        <label for="exampleInputEmail1" class="form-label">Sala 2</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Atualizar</button>
                         </div>
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+
+                        <!-- Sala 3 -->
+                        <label for="exampleInputEmail1" class="form-label">Sala 2</label>
                         <div class="input-group mb-3">
-                            
-                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Atualizar</button>
                         </div>
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+
+                        <!-- Sala 4 -->
+                        <label for="exampleInputEmail1" class="form-label">Sala 2</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Atualizar</button>
                         </div>
                     </form>
+
+                    <hr>
+
+                    <h4>Workshops</h4>
+                    <form class="mt-3">
+                        <!-- id= Emergências pediátricas -->
+                        <label for="" class="form-label">Emergências pediátricas</label>
+                        <div class="input-group mb-3">
+                            <input id="w0" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="atualizar_link(0)">Atualizar</button>
+                        </div>
+                        <script>
+                            
+                        </script>
+
+                        <!-- IFMSA: Simulação de Consulta em Libras -->
+                        <label for="" class="form-label">IFMSA: Simulação de Consulta em Libras</label>
+                        <div class="input-group mb-3">
+                            <input id="w1"  type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="atualizar_link(1)">Atualizar</button>
+                        </div>
+
+                        <!-- Intubação orotraqueal -->
+                        <label for="" class="form-label">Intubação orotraqueal</label>
+                        <div class="input-group mb-3">
+                            <input id="w2"  type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="atualizar_link(2)">Atualizar</button>
+                        </div>
+
+                        <!-- OSCE -->
+                        <label for="" class="form-label">OSCE</label>
+                        <div class="input-group mb-3">
+                            <input id="w3"  type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="atualizar_link(3)">Atualizar</button>
+                        </div>
+
+                        <!-- USG na emergência -->
+                        <label for="" class="form-label"> USG na emergência </label>
+                        <div class="input-group mb-3">
+                            <input id="w4"  type="text" class="form-control" placeholder="" aria-label="'" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="atualizar_link(4)">Atualizar</button>
+                        </div>
+
+                        <!-- ATLS -->
+                        <label for="" class="form-label"> ATLS </label>
+                        <div class="input-group mb-3">
+                            <input id="w5"  type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="atualizar_link(5)">Atualizar</button>
+                        </div>
+
+                        <!-- Como montar um currículo Lattes -->
+                        <label for="" class="form-label"> Como montar um currículo Lattes? </label>
+                        <div class="input-group mb-3">
+                            <input id="w6"  type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="atualizar_link(6)">Atualizar</button>
+                        </div>
+
+                        <!-- Cricotireotomia de Urgência -->
+                        <label for="" class="form-label"> Cricotireotomia de Urgência </label>
+                        <div class="input-group mb-3">
+                            <input id="w7"  type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="atualizar_link(7)">Atualizar</button>
+                        </div>
+
+                        <!-- ECG em 60 minutos -->
+                        <label for="" class="form-label"> ECG em 60 minutos </label>
+                        <div class="input-group mb-3">
+                            <input id="w8"  type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="atualizar_link(8)">Atualizar</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
         
-        
         <!-- Optional JavaScript -->
-        <!-- Script das Salas -->
-        <script src="script-salas.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-database.js"></script>
+        <script src="firebase_config.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
