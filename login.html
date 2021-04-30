@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <link rel="stylesheet" href="/style.css" />
 
-
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -247,27 +246,6 @@
                 } 
             };
 
-            // Retorna em bool se cpf está inscrito em algum workshop
-            function estaEmWorkshop(cpf){
-                for (i in workshop_inscritos) {
-                    if (workshop_inscritos[i].inscritos.includes(cpf)) {
-                    //console.log("Está inscrito no workshop " + workshop_inscritos[i].nome)
-                    return true
-                    break;
-                    }
-                }
-            };
-
-            /* Retorna qual workshop está inscrito
-            function qualWorkshop(cpf){
-                for (i in workshop_inscritos) {
-                    if (workshop_inscritos[i].inscritos.includes(cpf)) {
-                    //console.log("Está inscrito no workshop " + workshop_inscritos[i].nome)
-                    return workshop_inscritos[i].nome
-                    break;
-                    }
-                }
-            };*/
 
             // Função de validade input
             function validarInscricao(){
